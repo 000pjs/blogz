@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Blogz</title>
+            <style>
+                .error { color: red; }
+            </style>
+    </head>
+<body>
+
+    <div>
+        <a href="./logout">log out</a>
+
+    </div>
+    
+    <nav>
+        <a href="/newpost">Add New Post</a> |
+        <a href="/blog">Blog Listings</a> |
+      </nav> 
+
+    {% block content %}
+    {% endblock %}
+
+</body>
+</html>

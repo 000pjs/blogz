@@ -1,0 +1,19 @@
+nds "base.html" %}
+
+{% block content %}
+    <h1>Add a Blog Entry</h1>
+    <form action= "/newpost" method='post'>
+        <label for "title">
+            Blog Title:
+            <input id="title" type="text" name='blog-title' />
+        </label>
+        <p class="error">{{title_error}}</p>
+        <label for= "body">
+            Blog Body:
+            <input id= "body" type="textarea" name='blog-body' />
+        </label>
+        <p class="error">{{body_error}}</p>
+        <input type="submit" value='Add Entry' />
+    </form>
+
+{% endblock %}
