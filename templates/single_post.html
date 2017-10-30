@@ -4,7 +4,10 @@
 
     <h1>{{single_post.title}}</h1>
 
-   <p>{{single_post.body}}</p>
+        <p>{{single_post.body}}</p>
+
+        <p>Written by <a href="http://127.0.0.1:5000/./blog?user={{single_post.owner.username}}"<p>{{single_post.owner.username}}</a></p>
+
 
 
 {% endblock %}

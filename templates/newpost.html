@@ -1,4 +1,4 @@
-nds "base.html" %}
+{% extends "base.html" %}
 
 {% block content %}
     <h1>Add a Blog Entry</h1>
@@ -10,7 +10,7 @@ nds "base.html" %}
         <p class="error">{{title_error}}</p>
         <label for= "body">
             Blog Body:
-            <input id= "body" type="textarea" name='blog-body' />
+            <textarea id= "body" name='blog-body'></textarea>
         </label>
         <p class="error">{{body_error}}</p>
         <input type="submit" value='Add Entry' />

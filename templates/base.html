@@ -8,15 +8,25 @@
     </head>
 <body>
 
-    <div>
-        <a href="./logout">log out</a>
-
-    </div>
-    
     <nav>
+        <a href="/">Home</a> |
         <a href="/newpost">Add New Post</a> |
         <a href="/blog">Blog Listings</a> |
-      </nav> 
+        
+    </nav>    
+   
+    <div>
+        <a href="./login">login</a> |
+        <a href="./logout">log out</a> |
+    </div>
+    
+    {% with messages = get_flashed_messages(with_categories=True) %}
+        <ul>
+        {% for category,message in messages %}
+            <li class="{{category}}">{{message}}</li>
+        {% endfor %}
+        </ul>
+    {% endwith %}
 
     {% block content %}
     {% endblock %}

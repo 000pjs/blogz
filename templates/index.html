@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1>Blogz users</h1>
+
+    {% for user in users %}
+    <p><a href="http://127.0.0.1:5000/./blog?user={{user.username}}"<p>{{user.username}}</a></p>  
+</hr>
+    {% endfor %}
+
+
+{% endblock %}

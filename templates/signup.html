@@ -2,22 +2,25 @@
 
 {% block content %}
 <h1>Sign Up with Blogzzz!</h1>
-<form action="/register" method="post">
+<form action="/signup" method="post">
     <table>
         <tr>
-            <td><label for="email">Email</label></td>
+            <td><label for="username">Username</label></td>
             <td>
-                <input name="email" type="email" value="{{ email }}">
+                <input name="username" type="text" value="{{ username }}">
             </td>
+            <p class="error">{{username_error}}</p>
         </tr>
         <tr>
             <td><label for="password">Password</label></td>
             <td>
                 <input name="password" type="password">
             </td>
+            <p class="error">{{password_error}}</p>
         </tr>
         <tr>
             <td><label for="verify">Verify Password</label></td>
+            <p class="error" >{{ver_error}}</p>
             <td>
                 <input name="verify" type="password">
             </td>
